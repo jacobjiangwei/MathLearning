@@ -1,0 +1,26 @@
+{
+    "id": "F3E19072-D6E7-462B-937F-A8B4709CD167",
+    "description": "下列哪个数是负数？",
+    "images": [
+    ],
+    "type": "single_choice",
+    "answer_options": [
+      {
+        "option": "A. -3",
+        "is_correct": true
+      },
+      {
+        "option": "B. 3",
+        "is_correct": false
+      },
+      {
+        "option": "C. 0",
+        "is_correct": false
+      },
+      {
+        "option": "D. 1",
+        "is_correct": false
+      }
+    ],
+    "explanation": "负数前面有一个负号（-），表示这个数比零小。在这个例子中，-3表示这个数比零小3个单位。"
+  }
