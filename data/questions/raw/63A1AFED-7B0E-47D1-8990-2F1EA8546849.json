@@ -1,0 +1,29 @@
+{
+  "id": "63A1AFED-7B0E-47D1-8990-2F1EA8546849",
+  "description": "下列哪些温度是负数？",
+  "images": [],
+  "type": "multiple_choice",
+  "answer_options": [
+    {
+      "option": "A. 10℃",
+      "is_correct": false
+    },
+    {
+      "option": "B. -5℃",
+      "is_correct": true
+    },
+    {
+      "option": "C. 0℃",
+      "is_correct": false
+    },
+    {
+      "option": "D. -2℃",
+      "is_correct": true
+    },
+    {
+      "option": "E. 15℃",
+      "is_correct": false
+    }
+  ],
+  "explanation": "温度是表示物体热度的物理量。摄氏度（℃）是温度的单位之一。负数的温度表示比摄氏零度低的温度。"
+}

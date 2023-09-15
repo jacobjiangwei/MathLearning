@@ -1,0 +1,17 @@
+{
+    "id": "e5157226-07c6-4dc9-b6b0-769694289e6b",
+    "description": "平行四边形的对边是平行的。",
+    "images": [],
+    "type": "true_false",
+    "answer_options": [
+      {
+        "option": "True",
+        "is_correct": true
+      },
+      {
+        "option": "False",
+        "is_correct": false
+      }
+    ],
+    "explanation": "平行四边形是一种四边形，其对边是平行的且相等。因此，这个判断题的正确答案是True。"
+  }

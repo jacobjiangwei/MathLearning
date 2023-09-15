@@ -42,31 +42,12 @@ Exercise directories are organized hierarchically based on the user's level of e
 
 ```mermaid
 graph TD
-    A[Primary School Education] --> B[Grade 1]
-    B --> C[Topic 1]
-    C --> D[Subtopic 1]
-    D --> E[Question Collection 1.1]
-    C --> G[Subtopic 2]
-    G --> H[Question Collection 2.1]
-    B --> J[Topic 2]
-    J --> K[Subtopic 1]
-    K --> L[Question Collection 3.1]
-    J --> N[Subtopic 2]
-    N --> O[Question Collection 4.1]
-    A --> Q[Grade 2]
-    Q --> R[Topic 3]
-    R --> S[Subtopic 1]
-    S --> T[Question Collection 5.1]
-    R --> V[Subtopic 2]
-    V --> W[Question Collection 6.1]
-    Q --> Y[Topic 4]
-    Y --> Z[Subtopic 1]
-    Z --> AA[Question Collection 7.1]
-    Y --> AC[Subtopic 2]
-    AC --> AD[Question Collection 8.1]
+    A[Grade 1] --> B[Question Collection 1]
+    A[Grade 1] --> C[Question Collection 2]
+    J[Grade 2] --> K[Question Collection 6]
+    J[Grade 2] --> L[Question Collection 7]
 
 ```
-
 
 
 ```mermaid

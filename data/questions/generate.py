@@ -62,3 +62,4 @@ with open(filename, "w") as f:
 
 # Print file path
 print(f"File saved to: {os.path.abspath(filename)}")
+print("Please polish the question, including images in images folder, and then move it to the questions/raw folder and submit it via PR.")
