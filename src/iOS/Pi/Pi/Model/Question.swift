@@ -29,9 +29,14 @@ struct Question: Codable {
     var asnwer:String = ""
 }
 
+struct QuestionShort: Codable {
+    var id:String = ""
+    var title:String = ""
+}
+
 struct Chapter: Codable {
     var description:String = ""
-    var questionList:[String] = []
+    var questionList:[QuestionShort] = []
 }
 
 struct Grade: Codable {

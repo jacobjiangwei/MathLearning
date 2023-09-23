@@ -2,7 +2,7 @@
   "description": "Grade 4",
   "chapters": [
       {
-          "title": "Chapter 1 负数的认识",
+          "description": "Chapter 1 负数的认识",
           "questions": [
               {
                   "id": "63A1AFED-7B0E-47D1-8990-2F1EA8546849",
