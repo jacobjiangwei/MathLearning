@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		162B00252AB4040E00F03F86 /* PiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162B00242AB4040E00F03F86 /* PiApp.swift */; };
-		162B00272AB4040E00F03F86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162B00262AB4040E00F03F86 /* ContentView.swift */; };
 		162B00292AB4041000F03F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 162B00282AB4041000F03F86 /* Assets.xcassets */; };
 		162B002D2AB4041000F03F86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 162B002C2AB4041000F03F86 /* Preview Assets.xcassets */; };
 		162B00372AB4041100F03F86 /* PiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162B00362AB4041100F03F86 /* PiTests.swift */; };
 		162B00412AB4041100F03F86 /* PiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162B00402AB4041100F03F86 /* PiUITests.swift */; };
 		162B00432AB4041100F03F86 /* PiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162B00422AB4041100F03F86 /* PiUITestsLaunchTests.swift */; };
+		162B00512AB44F6900F03F86 /* HomeSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162B00502AB44F6900F03F86 /* HomeSwiftUIView.swift */; };
+		1631F7442AB8722400A6BE9A /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1631F7432AB8722400A6BE9A /* AppData.swift */; };
+		167B23352AB9F38F00D08224 /* MathEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B23342AB9F38F00D08224 /* MathEngine.swift */; };
+		167B23372ABA7AB800D08224 /* KeyCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B23362ABA7AB800D08224 /* KeyCenter.swift */; };
+		16BDE9EC2ABBCE2500F894F6 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BDE9EB2ABBCE2500F894F6 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		162B00212AB4040E00F03F86 /* Pi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		162B00242AB4040E00F03F86 /* PiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiApp.swift; sourceTree = "<group>"; };
-		162B00262AB4040E00F03F86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		162B00282AB4041000F03F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		162B002A2AB4041000F03F86 /* Pi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pi.entitlements; sourceTree = "<group>"; };
 		162B002C2AB4041000F03F86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +48,11 @@
 		162B003C2AB4041100F03F86 /* PiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		162B00402AB4041100F03F86 /* PiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiUITests.swift; sourceTree = "<group>"; };
 		162B00422AB4041100F03F86 /* PiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		162B00502AB44F6900F03F86 /* HomeSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSwiftUIView.swift; sourceTree = "<group>"; };
+		1631F7432AB8722400A6BE9A /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		167B23342AB9F38F00D08224 /* MathEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathEngine.swift; sourceTree = "<group>"; };
+		167B23362ABA7AB800D08224 /* KeyCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCenter.swift; sourceTree = "<group>"; };
+		16BDE9EB2ABBCE2500F894F6 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +103,10 @@
 		162B00232AB4040E00F03F86 /* Pi */ = {
 			isa = PBXGroup;
 			children = (
+				167B23332AB9F37400D08224 /* Engine */,
+				162B00522AB4508B00F03F86 /* Model */,
+				162B004F2AB44F5000F03F86 /* UX */,
 				162B00242AB4040E00F03F86 /* PiApp.swift */,
-				162B00262AB4040E00F03F86 /* ContentView.swift */,
 				162B00282AB4041000F03F86 /* Assets.xcassets */,
 				162B002A2AB4041000F03F86 /* Pi.entitlements */,
 				162B002B2AB4041000F03F86 /* Preview Content */,
@@ -127,6 +137,32 @@
 				162B00422AB4041100F03F86 /* PiUITestsLaunchTests.swift */,
 			);
 			path = PiUITests;
+			sourceTree = "<group>";
+		};
+		162B004F2AB44F5000F03F86 /* UX */ = {
+			isa = PBXGroup;
+			children = (
+				162B00502AB44F6900F03F86 /* HomeSwiftUIView.swift */,
+			);
+			path = UX;
+			sourceTree = "<group>";
+		};
+		162B00522AB4508B00F03F86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1631F7432AB8722400A6BE9A /* AppData.swift */,
+				16BDE9EB2ABBCE2500F894F6 /* Question.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		167B23332AB9F37400D08224 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				167B23342AB9F38F00D08224 /* MathEngine.swift */,
+				167B23362ABA7AB800D08224 /* KeyCenter.swift */,
+			);
+			path = Engine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				162B00272AB4040E00F03F86 /* ContentView.swift in Sources */,
+				167B23372ABA7AB800D08224 /* KeyCenter.swift in Sources */,
 				162B00252AB4040E00F03F86 /* PiApp.swift in Sources */,
+				162B00512AB44F6900F03F86 /* HomeSwiftUIView.swift in Sources */,
+				16BDE9EC2ABBCE2500F894F6 /* Question.swift in Sources */,
+				1631F7442AB8722400A6BE9A /* AppData.swift in Sources */,
+				167B23352AB9F38F00D08224 /* MathEngine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +459,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -457,6 +498,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

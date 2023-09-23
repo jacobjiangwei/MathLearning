@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct PiApp: App {
+
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeSwiftUIView()
+                .environmentObject(MathEngine.shared.appData)
+
         }
     }
 }
