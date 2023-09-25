@@ -25,6 +25,7 @@ struct GradeUIView: View {
 
                     }
                 }
+                .navigationTitle(appData.selectedGrade.description)
             }
 
 //            if !selectedGrade.chapters.isEmpty {
