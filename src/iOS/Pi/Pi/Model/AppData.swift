@@ -9,7 +9,6 @@ import Foundation
 import Combine
 
 class AppData: ObservableObject {
-    @Published var selectedGrade: String = "Grade 1"
-    @Published var selectedChapter: String = ""
-    @Published var selectedQuestion: String = ""
+    @Published var selectedGrade: Grade!
+    @Published var showGradeList = true
 }

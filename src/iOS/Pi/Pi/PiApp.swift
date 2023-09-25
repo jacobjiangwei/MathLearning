@@ -13,7 +13,7 @@ struct PiApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeSwiftUIView()
+            HomeUIView()
                 .environmentObject(MathEngine.shared.appData)
 
         }

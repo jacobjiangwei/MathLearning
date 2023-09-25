@@ -14,7 +14,7 @@ class MathEngine {
 
     private init() {}
 
-    func fetchJSON(from url: String) async throws -> Any {
+    private func fetchJSON(from url: String) async throws -> Any {
         let destinationURL = URL(string: url)!
         let (data, response) = try await URLSession.shared.data(from: destinationURL)
         
@@ -22,18 +22,20 @@ class MathEngine {
             let statusCode = (response as? HTTPURLResponse)?.statusCode ?? -1
             throw NSError(domain: "HTTPError", code: statusCode, userInfo: nil)
         }
-        print(String(data: data, encoding: String.Encoding.utf8))
-//        let json = try JSONSerialization.jsonObject(with: data)
+        print(String(data: data, encoding: String.Encoding.utf8)!)
         return data
     }
 
-    func fetchGrade() async {
+    func fetchGrade(url:String) async {
         do {
-            let jsonData = try await fetchJSON(from: KeyCenter.grade4)
-            let question = try JSONDecoder().decode(Grade.self, from: jsonData as! Data)
-            print(question)
+            let jsonData = try await fetchJSON(from: url)
+            let grade = try JSONDecoder().decode(Grade.self, from: jsonData as! Data)
+            print(grade)
             // 处理 JSON 数据
-            
+            DispatchQueue.main.async {
+                self.appData.selectedGrade = grade
+                self.appData.showGradeList = false
+            }
         } catch {
             print(error.localizedDescription.debugDescription)
         }

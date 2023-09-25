@@ -29,17 +29,34 @@ struct Question: Codable {
     var asnwer:String = ""
 }
 
-struct QuestionShort: Codable {
+struct QuestionShort: Codable, Identifiable, Hashable {
     var id:String = ""
     var title:String = ""
 }
 
-struct Chapter: Codable {
+struct Chapter: Codable,Identifiable, Hashable {
+    static func == (lhs: Chapter, rhs: Chapter) -> Bool {
+        return lhs.id.uuidString == rhs.id.uuidString
+    }
+    
+    var id: UUID = UUID()
     var description:String = ""
-    var questionList:[QuestionShort] = []
+    var questions:[QuestionShort] = []
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.description = try container.decode(String.self, forKey: .description)
+        self.questions = try container.decode([QuestionShort].self, forKey: .questions)
+    }
 }
 
 struct Grade: Codable {
     var description: String
     var chapters: [Chapter] = []
+}
+
+struct GradeOption:Codable, Identifiable, Hashable {
+    var id: UUID = UUID()
+    let name: String
+    let url: String
 }
