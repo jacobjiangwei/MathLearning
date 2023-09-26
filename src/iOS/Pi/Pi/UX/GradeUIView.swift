@@ -22,24 +22,20 @@ struct GradeUIView: View {
                         } header: {
                             Text(chapter.description)
                         }
-
                     }
                 }
                 .navigationTitle(appData.selectedGrade.description)
-            }
+                .toolbar(content: {
+                    ToolbarItem(placement: .navigation) {
+                        Button {
+                            appData.showGradeList = true
+                        } label: {
+                            Text("Select Grade")
+                        }
 
-//            if !selectedGrade.chapters.isEmpty {
-//                let firstChapter = selectedGrade.chapters.first!
-//                if !firstChapter.questions.isEmpty {
-//                    NavigationView {
-//                        List(firstChapter.questions) { question in
-//                            Text(question.title)
-//                        }
-//                        .navigationTitle(appData.selectedGrade.description)
-//                    }
-//
-//                }
-//            }
+                    }
+                })
+            }
         }
     }
 }
