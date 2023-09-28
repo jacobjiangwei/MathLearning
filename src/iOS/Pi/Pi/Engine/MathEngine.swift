@@ -14,7 +14,7 @@ class MathEngine {
 
     private init() {}
 
-    private func fetchJSON(from url: String) async throws -> Any {
+    private func fetchJSON(from url: String) async throws -> Data {
         let destinationURL = URL(string: url)!
         let (data, response) = try await URLSession.shared.data(from: destinationURL)
         
@@ -38,6 +38,20 @@ class MathEngine {
             }
         } catch {
             print(error.localizedDescription.debugDescription)
+        }
+    }
+
+    func fetchQuestion(questionID:String) async -> Result<Question, Error> {
+        do {
+            let questionURL = "https://raw.githubusercontent.com/jacobjiangwei/MathLearning/main/data/questions/raw/" + questionID + ".json"
+            let jsonData = try await fetchJSON(from: questionURL)
+            let question = try JSONDecoder().decode(Question.self, from: jsonData)
+            print(question)
+            return .success(question)
+            // 处理 JSON 数据
+        } catch {
+            print(error.localizedDescription.debugDescription)
+            return .failure(error)
         }
     }
 }

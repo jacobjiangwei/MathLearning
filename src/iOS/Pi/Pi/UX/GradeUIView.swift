@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import ProgressHUD
 
 struct GradeUIView: View {
     @EnvironmentObject var appData: AppData
-    
+
     var body: some View {
         if let selectedGrade = appData.selectedGrade {
             NavigationView {
@@ -17,7 +18,23 @@ struct GradeUIView: View {
                     ForEach(selectedGrade.chapters) { chapter in
                         Section {
                             ForEach(chapter.questions) { question in
-                                Text(question.title)
+                                NavigationLink(destination: QuestionDetailUIView(questionId: question.id), label: {
+                                    Text(question.title)
+                                })
+//                                    .onTapGesture {
+//                                        Task {
+//                                            let result = await MathEngine.shared.fetchQuestion(questionID: question.id)
+//                                            switch result {
+//                                            case .success(let question):
+//                                                let questionDetailUI = QuestionDetailUIView(question: question)
+//                                                // 打开问题详情界面
+//
+//                                            case .failure(let error):
+//                                                print(error.localizedDescription)
+//                                            }
+//                                        }
+//                                        ProgressHUD.show("Loading")
+//                                    }
                             }
                         } header: {
                             Text(chapter.description)
@@ -32,16 +49,15 @@ struct GradeUIView: View {
                         } label: {
                             Text("Select Grade")
                         }
-
                     }
                 })
             }
         }
     }
 }
-
-struct HomeSwiftUIView_Previews: PreviewProvider {
-    static var previews: some View {
-        GradeUIView()
-    }
-}
+//
+//struct HomeSwiftUIView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GradeUIView()
+//    }
+//}
