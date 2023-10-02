@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-//import ProgressHUD
 
 struct QuestionDetailUIView: View {
     var questionId: String

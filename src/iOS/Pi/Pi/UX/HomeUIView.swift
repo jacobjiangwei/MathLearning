@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-//import ProgressHUD
-import SwiftfulLoadingIndicators
 
 struct HomeUIView: View {
     @EnvironmentObject var appData: AppData

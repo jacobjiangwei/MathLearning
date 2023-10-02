@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-//import ProgressHUD
 
 struct GradeUIView: View {
     @EnvironmentObject var appData: AppData
