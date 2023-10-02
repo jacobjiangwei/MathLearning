@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-import ProgressHUD
+//import ProgressHUD
+
 struct QuestionDetailUIView: View {
     var questionId: String
     @State var question: Question?

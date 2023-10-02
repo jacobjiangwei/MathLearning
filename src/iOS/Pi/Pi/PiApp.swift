@@ -9,13 +9,16 @@ import SwiftUI
 
 @main
 struct PiApp: App {
-
+    @StateObject var loaderManager = LoaderManager()
 
     var body: some Scene {
         WindowGroup {
-            HomeUIView()
-                .environmentObject(MathEngine.shared.appData)
-
+            ZStack {
+                HomeUIView()
+                    .environmentObject(MathEngine.shared.appData)
+                    .environmentObject(loaderManager)
+                if loaderManager.showLoader { LoadingView() }
+            }
         }
     }
 }

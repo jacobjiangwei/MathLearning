@@ -6,19 +6,25 @@
 //
 
 import SwiftUI
-import ProgressHUD
+//import ProgressHUD
+import SwiftfulLoadingIndicators
 
 struct HomeUIView: View {
     @EnvironmentObject var appData: AppData
+    @EnvironmentObject var loaderManager: LoaderManager
+
+
     var body: some View {
         if appData.showGradeList {
             NavigationView {
+
                 List(KeyCenter.grades) { grade in
                     Button(action: {
                         print("clicked \(grade)")
-                        ProgressHUD.show("Loading")
+                        loaderManager.showLoader = true
                         Task {
                             await MathEngine.shared.fetchGrade(url: grade.url)
+                            loaderManager.showLoader = false
                         }
                     }, label: {
                         Text(grade.name)
@@ -31,9 +37,6 @@ struct HomeUIView: View {
         else {
             GradeUIView()
                 .environmentObject(MathEngine.shared.appData)
-                .onAppear() {
-                    ProgressHUD.dismiss()
-                }
         }
     }
 }
